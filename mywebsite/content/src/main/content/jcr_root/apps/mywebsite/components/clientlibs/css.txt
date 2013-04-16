@@ -1,3 +1,0 @@
-site.css
-demo_table.css
-tweet.css
