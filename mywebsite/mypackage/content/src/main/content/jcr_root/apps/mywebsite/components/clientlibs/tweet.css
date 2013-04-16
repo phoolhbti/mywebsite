@@ -1,0 +1,23 @@
+.tweetContainer {
+    width: 300px;
+    height: 28.5em; 
+    overflow: hidden; 
+}
+#tw {
+    width: 300px;
+    position: relative;
+    list-style-type: none;
+    top: -6em; 
+    margin: 0px;
+    padding: 0px;
+}
+.tweetImage {
+    float: left;
+    padding-right: 1em;
+}
+.tweet {
+    height: 6em;
+    padding-top: 0.3em;
+    font-size: 0.9em;
+    border-bottom: 1px solid #333333;
+}
