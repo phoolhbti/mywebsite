@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+<filter>
+ <root>/apps/mywebsite</root>    
+	<mode>merge</mode> 
+       <includes>
+              <include>/apps/mywebsite/install/</include>
+              <include>/apps/mywebsite/components</include>
+			  <include>/apps/mywebsite/templates</include>
+			  <include>/apps/mywebsite/resources</include>
+       </includes>
+       <excludes>
+              <exclude>/apps/mywebsite/config/*</exclude>
+       </excludes>
+	</filter>   
+</workspaceFilter>
