@@ -100,5 +100,6 @@ jQuery('#submit').click(function() {
     </div>
        
 </div>
+<cq:include path="title" resourceType="mywebsite/components/charts/barChart" />
 </body>
 </html>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
+<!--
 <filter>
  <root>/apps/mywebsite</root>    
 	<mode>merge</mode> 
@@ -8,9 +9,16 @@
               <include>/apps/mywebsite/components</include>
 			  <include>/apps/mywebsite/templates</include>
 			  <include>/apps/mywebsite/resources</include>
+			  <include>/etc/designs/mywebsite</include>
+			  <include>/content/mywebsite</include>
        </includes>
        <excludes>
               <exclude>/apps/mywebsite/config/*</exclude>
        </excludes>
-	</filter>   
+	</filter>  
+-->	
+<filter root="/etc/designs/mywebsite" />
+<filter root="/apps/mywebsite">
+</filter>
+<filter root="/content/mywebsite"/>
 </workspaceFilter>

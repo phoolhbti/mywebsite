@@ -54,7 +54,7 @@ import com.day.cq.mailer.MessageGatewayService;
 @Service
 @Properties({
         @Property(name = Constants.SERVICE_DESCRIPTION, value = "ProductEmailWorkflowProcess workflow process implementation."),
-        @Property(name = Constants.SERVICE_VENDOR, value = "Virtusa"),
+        @Property(name = Constants.SERVICE_VENDOR, value = "PC"),
         @Property(name = "process.label", value = "ProductEmailWorkflowProcess Workflow Process")})
 public class ProductEmailWorkflowProcess implements WorkflowProcess {
 

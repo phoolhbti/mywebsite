@@ -44,7 +44,7 @@ import javax.jcr.Node;
 @Service
 @Properties({
         @org.apache.felix.scr.annotations.Property(name = Constants.SERVICE_DESCRIPTION, value = "Customer Services"),
-        @org.apache.felix.scr.annotations.Property(name = Constants.SERVICE_VENDOR, value = "Virtusa")
+        @org.apache.felix.scr.annotations.Property(name = Constants.SERVICE_VENDOR, value = "PC")
        })
 public class CustomerServiceImp implements CustomerService {
  

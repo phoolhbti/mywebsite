@@ -23,9 +23,5 @@
                     xtype="sizefield"/>
             </items>
         </advanced>
-        <phoolchandra
-            jcr:primaryType="pcnode"
-            address="dddddddddddddd"
-            name="pkkkkkkkkkkkkkkkkk"/>
     </items>
 </jcr:root>

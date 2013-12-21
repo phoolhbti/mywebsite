@@ -25,11 +25,11 @@ public class ProductLoggingServlet extends SlingAllMethodsServlet
     @Override
     protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException
     {
-   response.setContentType("application/json");
-System.out.println("with in get Method");
-        JSONWriter writer = new JSONWriter(response.getWriter());
+    		response.setContentType("application/json");
+    		System.out.println("with in get Method");
+    		JSONWriter writer = new JSONWriter(response.getWriter());
 
-        try {
+    		try {
             /**
              * [ { "text":"Test1" }, { "text":"Test2" } ]
              */

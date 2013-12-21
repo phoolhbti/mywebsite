@@ -25,7 +25,7 @@ import org.apache.sling.commons.json.JSONArray;
 @Properties( {
         @Property(name = "service.pid", value = "com.pearson.servlets.ProductServletPC", propertyPrivate = false),
         @Property(name = "service.description", value = "ProductServletPC", propertyPrivate = false),
-        @Property(name = "service.vendor", value = "VirtusaPC", propertyPrivate = false) })
+        @Property(name = "service.vendor", value = "PC", propertyPrivate = false) })
 public class ProductServletPC extends SlingAllMethodsServlet {
    
 

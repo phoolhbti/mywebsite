@@ -17,7 +17,7 @@ import org.osgi.framework.Constants;
 @Service
 @Properties({
         @org.apache.felix.scr.annotations.Property(name = Constants.SERVICE_DESCRIPTION, value = "DatasourceUtil Services"),
-        @org.apache.felix.scr.annotations.Property(name = Constants.SERVICE_VENDOR, value = "Virtusa")
+        @org.apache.felix.scr.annotations.Property(name = Constants.SERVICE_VENDOR, value = "PC")
        })
 
 public class DatasourceUtilImpl implements DatasourceUtil {
