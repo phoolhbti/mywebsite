@@ -1,0 +1,56 @@
+/* parsys component */
+div.par {
+    clear: both;
+}
+div.parsys_column {
+    height: 100%;
+    width: 100%;
+    float: left;
+    border: 0;
+    vertical-align:top;
+    padding: 0;
+    margin: 0;
+}
+ 
+div.section {
+    /* Property added to avoid IE hasLayout issue on paragraphs
+       see #20817 - IE6: div around Drag Components image not big enough
+    */
+    zoom: 1;
+}
+ 
+div.parsys_column .section {
+    overflow:hidden;
+    width: 100%;
+}
+ 
+/* column control layouts */
+div.cq-colctrl-cols {width: 100%; float: left; }
+ 
+div.cq-colctrl-default { width: 100%;}
+ 
+/* layout 0 : 50% 50% ( grid6 + grid6 ) */
+div.cq-colctrl-lt0 { }
+div.cq-colctrl-lt0-c0 { width: 48%; margin-right:10px}
+div.cq-colctrl-lt0-c1 { width: 48%; margin-left: 10px}
+ 
+/* layout 1 : 33% 33% 33%( grid4 + grid4 + grid4 ) */
+div.cq-colctrl-lt1 { }
+div.cq-colctrl-lt1-c0 { width: 32%; margin-right: 10px;}
+div.cq-colctrl-lt1-c1 { width: 32%; margin-left: 10px; margin-right: 10px;}
+div.cq-colctrl-lt1-c2 { width: 32%; margin-left: 10px; }
+ 
+/* layout 2: 16% 16% 16% 33% ( grid2.6 + grid2.6 + grid2.6 + grid4 ) */
+div.cq-colctrl-lt2 { }
+div.cq-colctrl-lt2-c0 { width: 24%; margin-right: 10px;}
+div.cq-colctrl-lt2-c1 { width: 24%; margin-left: 10px; margin-right: 10px}
+div.cq-colctrl-lt2-c2 { width: 24%; margin-left: 10px; margin-right: 10px}
+div.cq-colctrl-lt2-c3 { width: 23%; margin-left: 10px }
+ 
+ 
+span.strikethrough {
+    text-decoration:line-through;
+}
+#CQrte span.strikethrough {
+    text-decoration:line-through;
+}

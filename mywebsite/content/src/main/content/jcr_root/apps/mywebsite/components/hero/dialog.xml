@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Hero Component"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <style
+                jcr:primaryType="cq:Panel"
+                title="Style and Hero Image">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <type
+                        jcr:primaryType="cq:Widget"
+                        anchor="60%"
+                        fieldLabel="Display Type"
+                        name="./displayType"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <o1
+                                jcr:primaryType="nt:unstructured"
+                                text="Image on Left of Content"
+                                value="imageLeft"/>
+                            <o2
+                                jcr:primaryType="nt:unstructured"
+                                text="Image on Right of Content"
+                                value="imageRight"/>
+                            <o3
+                                jcr:primaryType="nt:unstructured"
+                                text="Image on Top of Content"
+                                value="imageTop"/>
+                            <o4
+                                jcr:primaryType="nt:unstructured"
+                                text="Image on Bottom of Content"
+                                value="imageBottom"/>
+                        </options>
+                    </type>
+                    <imageurl
+                        jcr:primaryType="cq:Widget"
+                        anchor="60%"
+                        fieldLabel="Image Action Link"
+                        name="./imageurl"
+                        xtype="textfield"/>
+                    <imagealttext
+                        jcr:primaryType="cq:Widget"
+                        anchor="60%"
+                        fieldLabel="Image Alt Text"
+                        name="./imagealttext"
+                        xtype="textfield"/>
+                    <image
+                        jcr:primaryType="cq:Widget"
+                        cropParameter="./imageCrop"
+                        ddGroups="[media]"
+                        fileNameParameter="./fileName"
+                        fileReferenceParameter="./fileReference"
+                        height="{Long}300"
+                        mapParameter="./imageMap"
+                        name="./file"
+                        requestSuffix=".img.png"
+                        rotateParameter="./imageRotate"
+                        sizeLimit="100"
+                        title="Image"
+                        xtype="html5smartimage"/>
+                </items>
+            </style>
+            <title
+                jcr:primaryType="cq:Panel"
+                title="Title">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <title
+                        jcr:primaryType="cq:Widget"
+                        externalStyleSheets="/apps/mywebsite/components/hero/clientlib/css/static.css"
+                        fieldLabel="Title"
+                        name="./title"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            externalStyleSheets="[/apps/mywebsite/components/hero/clientlib/css/static.css]"
+                            removeSingle_x0020_ParagraphContainer="{Boolean}true"
+                            xtype="richtext ">
+                            <rtePlugins
+                                jcr:primaryType="cq:Widget"
+                                path="/apps/mywebsite/components/rteconfig/rtePlugins.infinity.json"
+                                xtype="cqinclude"/>
+                        </fieldConfig>
+                    </title>
+                </items>
+            </title>
+            <subtitle
+                jcr:primaryType="cq:Panel"
+                title="Sub Title">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <subtitle
+                        jcr:primaryType="cq:Widget"
+                        externalStyleSheets="/apps/mywebsite/components/hero/clientlib/css/static.css"
+                        fieldLabel="Sub-Title"
+                        name="./subtitle"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            externalStyleSheets="[/apps/mywebsite/components/hero/clientlib/css/static.css]"
+                            removeSingle_x0020_ParagraphContainer="{Boolean}true"
+                            xtype="richtext ">
+                            <rtePlugins
+                                jcr:primaryType="cq:Widget"
+                                path="/apps/mywebsite/components/rteconfig/rtePlugins.infinity.json"
+                                xtype="cqinclude"/>
+                        </fieldConfig>
+                    </subtitle>
+                </items>
+            </subtitle>
+            <description
+                jcr:primaryType="cq:Panel"
+                title="Description ">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <description
+                        jcr:primaryType="cq:Widget"
+                        externalStyleSheets="/apps/mywebsite/components/hero/clientlib/css/static.css"
+                        fieldLabel="Description"
+                        name="./description"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            externalStyleSheets="[/apps/mywebsite/components/hero/clientlib/css/static.css]"
+                            removeSingle_x0020_ParagraphContainer="{Boolean}true"
+                            xtype="richtext ">
+                            <rtePlugins
+                                jcr:primaryType="cq:Widget"
+                                path="/apps/mywebsite/components/rteconfig/rtePlugins.infinity.json"
+                                xtype="cqinclude"/>
+                        </fieldConfig>
+                    </description>
+                </items>
+            </description>
+            <footnote
+                jcr:primaryType="cq:Panel"
+                title="Footnote">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <footnote
+                        jcr:primaryType="cq:Widget"
+                        externalStyleSheets="/apps/mywebsite/components/hero/clientlib/css/static.css"
+                        fieldLabel="Footnote"
+                        name="./footnote"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            externalStyleSheets="[/apps/mywebsite/components/hero/clientlib/css/static.css]"
+                            removeSingle_x0020_ParagraphContainer="{Boolean}true"
+                            xtype="richtext ">
+                            <rtePlugins
+                                jcr:primaryType="cq:Widget"
+                                path="/apps/mywebsite/components/rteconfig/rtePlugins.infinity.json"
+                                xtype="cqinclude"/>
+                        </fieldConfig>
+                    </footnote>
+                </items>
+            </footnote>
+            <links
+                jcr:primaryType="cq:Panel"
+                title="Links">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <links
+                        jcr:primaryType="cq:Widget"
+                        externalStyleSheets="/apps/mywebsite/components/hero/clientlib/css/static.css"
+                        fieldLabel="Links"
+                        name="./links"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            optionsProvider="Ejst.x3.provideOptions"
+                            xtype="ejstcustom"/>
+                    </links>
+                </items>
+            </links>
+            <otherimages
+                jcr:primaryType="cq:Panel"
+                title="Other Images">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <image1
+                        jcr:primaryType="cq:Widget"
+                        sling:resourceType="foundation/components/image"
+                        ddGroups="[media]"
+                        fieldLabel="Image1"
+                        fileNameParameter="./image1/fileName"
+                        fileReferenceParameter="./image1/fileReference"
+                        height="{Long}300"
+                        mapParameter="./imageMap"
+                        name="./image1/image1file"
+                        requestSuffix=".img.png"
+                        rotateParameter="./imageRotate"
+                        title="Image1"
+                        width="{Long}300"
+                        xtype="html5smartimage"/>
+                    <image2
+                        jcr:primaryType="cq:Widget"
+                        sling:resourceType="foundation/components/image"
+                        ddGroups="[media]"
+                        fieldLabel="Image1"
+                        fileNameParameter="./image2/fileName"
+                        fileReferenceParameter="./image2/fileReference"
+                        height="{Long}100"
+                        mapParameter="./imageMap"
+                        name="./image2/image2file"
+                        requestSuffix=".img.png"
+                        rotateParameter="./imageRotate"
+                        title="Image2"
+                        width="{Long}300"
+                        xtype="html5smartimage"/>
+                    <image3
+                        jcr:primaryType="cq:Widget"
+                        sling:resourceType="foundation/components/image"
+                        ddGroups="[media]"
+                        fieldLabel="Image3"
+                        fileNameParameter="./image3/fileName"
+                        fileReferenceParameter="./image3/fileReference"
+                        height="{Long}100"
+                        mapParameter="./imageMap"
+                        name="./image3/image1file"
+                        requestSuffix=".img.png"
+                        rotateParameter="./imageRotate"
+                        title="Image1"
+                        width="{Long}300"
+                        xtype="html5smartimage"/>
+                </items>
+            </otherimages>
+        </items>
+    </items>
+</jcr:root>

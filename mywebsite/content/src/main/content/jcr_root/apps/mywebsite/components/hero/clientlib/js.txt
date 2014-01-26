@@ -1,0 +1,4 @@
+#base=js
+RichText.js
+components.js
+CustomWidget.js
