@@ -21,4 +21,5 @@
 <filter root="/apps/mywebsite">
 </filter>
 <filter root="/content/mywebsite"/>
+<filter root="/apps/mywebsite/install/" />
 </workspaceFilter>

@@ -1,13 +1,6 @@
 package com.pc.test.cqutil.pworkflows;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.Calendar;
+
 import java.util.List;
 import java.util.ArrayList;
 import javax.mail.internet.InternetAddress;
@@ -15,10 +8,9 @@ import javax.mail.internet.InternetAddress;
 import org.apache.commons.mail.HtmlEmail;
 
 import javax.jcr.Node;
-import javax.jcr.NodeIterator;
+
 import javax.jcr.PathNotFoundException;
 
-import javax.jcr.PropertyIterator;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 

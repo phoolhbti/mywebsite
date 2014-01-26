@@ -32,7 +32,7 @@
     }
 %><head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"<%=xs%>>
-    <meta http-equiv="keywords" content="<%= StringEscapeUtils.escapeHtml4(WCMUtils.getKeywords(currentPage, false)) %>"<%=xs%>>
+   
     <meta http-equiv="description" content="<%= StringEscapeUtils.escapeHtml4(properties.get("jcr:description", "")) %>"<%=xs%>>
     <cq:include script="headlibs.jsp"/>
     <cq:include script="/libs/wcm/core/components/init/init.jsp"/>
@@ -41,5 +41,5 @@
     <link rel="icon" type="image/vnd.microsoft.icon" href="<%= favIcon %>"<%=xs%>>
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="<%= favIcon %>"<%=xs%>>
     <% } %>
-    <title><%= currentPage.getTitle() == null ? StringEscapeUtils.escapeHtml4(currentPage.getName()) : StringEscapeUtils.escapeHtml4(currentPage.getTitle()) %></title>
+    <title>${currentPage.title}</title>
 </head>
