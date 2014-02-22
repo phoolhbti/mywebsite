@@ -6,7 +6,7 @@
             jcr:primaryType="nt:unstructured"
             accept="image/.*"
             groups="media"
-            propertyName="./imageReference">
+            propertyName="./image/imageReference">
             <parameters
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="foundation/components/textimage">

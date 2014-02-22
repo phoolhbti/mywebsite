@@ -1,6 +1,6 @@
 <%--
 
-  My Logo Component component.
+  My Logo Component component. by Phool Chandra
 
    This is My Logo Component
 

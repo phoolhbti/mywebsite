@@ -78,8 +78,9 @@
                         <fieldConfig
                             jcr:primaryType="nt:unstructured"
                             externalStyleSheets="[/apps/mywebsite/components/hero/clientlib/css/static.css]"
+                            optionsProvider="Ejst.x3.provideOptions"
                             removeSingle_x0020_ParagraphContainer="{Boolean}true"
-                            xtype="richtext ">
+                            xtype="richtext">
                             <rtePlugins
                                 jcr:primaryType="cq:Widget"
                                 path="/apps/mywebsite/components/rteconfig/rtePlugins.infinity.json"
@@ -101,8 +102,9 @@
                         <fieldConfig
                             jcr:primaryType="nt:unstructured"
                             externalStyleSheets="[/apps/mywebsite/components/hero/clientlib/css/static.css]"
+                            optionsProvider="Ejst.x3.provideOptions"
                             removeSingle_x0020_ParagraphContainer="{Boolean}true"
-                            xtype="richtext ">
+                            xtype="richtext">
                             <rtePlugins
                                 jcr:primaryType="cq:Widget"
                                 path="/apps/mywebsite/components/rteconfig/rtePlugins.infinity.json"
@@ -125,7 +127,7 @@
                             jcr:primaryType="nt:unstructured"
                             externalStyleSheets="[/apps/mywebsite/components/hero/clientlib/css/static.css]"
                             removeSingle_x0020_ParagraphContainer="{Boolean}true"
-                            xtype="richtext ">
+                            xtype="richtext">
                             <rtePlugins
                                 jcr:primaryType="cq:Widget"
                                 path="/apps/mywebsite/components/rteconfig/rtePlugins.infinity.json"
@@ -148,7 +150,7 @@
                             jcr:primaryType="nt:unstructured"
                             externalStyleSheets="[/apps/mywebsite/components/hero/clientlib/css/static.css]"
                             removeSingle_x0020_ParagraphContainer="{Boolean}true"
-                            xtype="richtext ">
+                            xtype="richtext">
                             <rtePlugins
                                 jcr:primaryType="cq:Widget"
                                 path="/apps/mywebsite/components/rteconfig/rtePlugins.infinity.json"

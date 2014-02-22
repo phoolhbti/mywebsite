@@ -907,8 +907,8 @@ CQ.form.RichText = CQ.Ext.extend(CQ.Ext.form.Field, {
         if (this.initialized) {
             var html = this.editorKernel.getProcessedHtml();
             if (this.fireEvent("beforesync", this, html) !== false) {
-              this.el.dom.value = html;
-               //if(this.el.dom){this.el.dom.value = html;}
+             // this.el.dom.value = html;
+             if(this.el.dom){this.el.dom.value = html;}
                 this.fireEvent("sync", this, html);
             }
         }
