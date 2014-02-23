@@ -28,6 +28,8 @@ import javax.jcr.Session;
 import org.apache.sling.api.resource.ResourceResolverFactory;
 import org.apache.sling.api.resource.ResourceResolver;
 
+import com.pc.test.cqutil.beans.Customer;
+
 //This is a component so it can provide or consume services
 @Component
 @Service

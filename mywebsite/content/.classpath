@@ -26,4 +26,5 @@
   <classpathentry kind="var" path="M2_REPO/org/apache/lucene/lucene-core/3.0.3/lucene-core-3.0.3.jar" sourcepath="M2_REPO/org/apache/lucene/lucene-core/3.0.3/lucene-core-3.0.3-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/apache/derby/derby/10.5.3.0_1/derby-10.5.3.0_1.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/slf4j/jcl-over-slf4j/1.6.4/jcl-over-slf4j-1.6.4.jar" sourcepath="M2_REPO/org/slf4j/jcl-over-slf4j/1.6.4/jcl-over-slf4j-1.6.4-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.jar"/>
 </classpath>

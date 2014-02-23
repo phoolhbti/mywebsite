@@ -33,6 +33,8 @@ import org.osgi.framework.Constants;
 
 import javax.jcr.Session;
 
+import com.pc.test.cqutil.beans.Customer;
+
 @Component(metatype = true)
 @Service
 @Properties({

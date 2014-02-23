@@ -1,55 +1,20 @@
 package com.pc.test.cqutil.user;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-    
     
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-    
-import java.io.StringWriter;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ArrayList;
-  
-import java.util.HashMap;
-import java.util.Map;
-    
-import javax.jcr.Repository; 
-import javax.jcr.SimpleCredentials; 
-import javax.jcr.Node; 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-     
-import org.apache.jackrabbit.commons.JcrUtils;
-    
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-    
+import org.slf4j.LoggerFactory;    
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Service;
-import javax.jcr.RepositoryException;
-import org.apache.felix.scr.annotations.Reference;
-import org.apache.jackrabbit.commons.JcrUtils;
-    
-import javax.jcr.Session;
-import javax.jcr.Node; 
-   
+import org.apache.felix.scr.annotations.Reference;    
+import javax.jcr.Session;   
    
 //Sling Imports
 import org.apache.sling.api.resource.ResourceResolverFactory ; 
-import org.apache.sling.api.resource.ResourceResolver; 
-import org.apache.sling.api.resource.Resource; 
+import org.apache.sling.api.resource.ResourceResolver;  
  
 //Jackrabbit User APIs
 import org.apache.jackrabbit.api.JackrabbitSession ;
 import org.apache.jackrabbit.api.security.user.UserManager  ;
-import org.apache.jackrabbit.api.security.user.User;
-import  org.apache.jackrabbit.api.security.user.Authorizable ;
- 
- 
+import  org.apache.jackrabbit.api.security.user.Authorizable ; 
  
 //This is a component so it can provide or consume services
 @Component
@@ -69,8 +34,7 @@ private java.util.Iterator<Authorizable> users = null ;
 private ResourceResolverFactory resolverFactory;
  
 @Override
-public String getCQUsers() {
-         
+public String getCQUsers() {         
  try
  {
   //Invoke the adaptTo method to create a Session 
