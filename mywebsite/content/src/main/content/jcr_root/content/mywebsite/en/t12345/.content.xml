@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2014-02-23T21:20:32.740+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/mywebsite/templates/templateHook"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="t12345"
+        sling:resourceType="mywebsite/components/page/templateHook">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <slingcomponent
+                jcr:created="{Date}2014-02-23T21:17:50.806+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-23T21:17:50.806+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="mywebsite/components/slingComponent"/>
+            <slingcomponent_0
+                jcr:created="{Date}2014-02-23T21:19:49.823+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-23T21:19:49.823+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="mywebsite/components/slingComponent"/>
+            <slingcomponent_1
+                jcr:created="{Date}2014-02-23T21:20:25.965+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-23T21:20:25.965+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="mywebsite/components/slingComponent"/>
+            <slingcomponent_2
+                jcr:created="{Date}2014-02-23T21:20:32.737+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2014-02-23T21:20:32.737+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="mywebsite/components/slingComponent"/>
+        </par>
+    </jcr:content>
+</jcr:root>

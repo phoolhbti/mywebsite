@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component enabled="true" name="com.pc.test.cqutil.ExampleServiceImpl">
+        <implementation class="com.pc.test.cqutil.ExampleServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="org.osgi.service.event.EventHandler"/>
+        </service>
+        <property name="event.topics" type="String" private="false">
+            org/apache/sling/api/resource/Resource/ADDED
+            org/apache/sling/api/resource/Resource/CHANGED
+            org/apache/sling/api/resource/Resource/REMOVED
+        </property>
+        <property name="event.filter" type="String" value="(path=/content/my/root/*/myNode)" private="false"/>
+        <property name="service.pid" value="com.pc.test.cqutil.ExampleServiceImpl" private="false"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.pc.test.cqutil.chart.CustomerServiceImpl">
+        <implementation class="com.pc.test.cqutil.chart.CustomerServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.pc.test.cqutil.chart.CustomerService"/>
+        </service>
+        <property name="service.pid" value="com.pc.test.cqutil.chart.CustomerServiceImpl" private="false"/>
+        <reference name="resolverFactory" interface="org.apache.sling.api.resource.ResourceResolverFactory" cardinality="1..1" policy="static" bind="bindResolverFactory" unbind="unbindResolverFactory" checked="true" strategy="event"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.pc.test.cqutil.jcrquery.CustomerServiceImp">
+        <implementation class="com.pc.test.cqutil.jcrquery.CustomerServiceImp"/>
+        <service servicefactory="false">
+            <provide interface="com.pc.test.cqutil.jcrquery.CustomerService"/>
+        </service>
+        <property name="service.description" type="String" value="Customer Services" private="false"/>
+        <property name="service.vendor" type="String" value="PC" private="false"/>
+        <property name="service.pid" value="com.pc.test.cqutil.jcrquery.CustomerServiceImp" private="false"/>
+        <reference name="repository" interface="org.apache.sling.jcr.api.SlingRepository" cardinality="1..1" policy="static" bind="bindRepository" unbind="unbindRepository" checked="true" strategy="event"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.pc.test.cqutil.jcrquery.DatasourceUtilImpl">
+        <implementation class="com.pc.test.cqutil.jcrquery.DatasourceUtilImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.pc.test.cqutil.jcrquery.DatasourceUtil"/>
+        </service>
+        <property name="service.description" type="String" value="DatasourceUtil Services" private="false"/>
+        <property name="service.vendor" type="String" value="PC" private="false"/>
+        <property name="service.pid" value="com.pc.test.cqutil.jcrquery.DatasourceUtilImpl" private="false"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="com.pc.test.cqutil.product.ProductAdapter">
+        <implementation class="com.pc.test.cqutil.product.ProductAdapter"/>
+        <service servicefactory="false">
+            <provide interface="org.apache.sling.api.adapter.AdapterFactory"/>
+        </service>
+        <property name="adapters" type="String" value="com.pc.test.cqutil.product.Product" private="false"/>
+        <property name="adaptables" type="String" value="com.day.cq.wcm.api.Page" private="false"/>
+        <property name="service.pid" value="com.pc.test.cqutil.product.ProductAdapter" private="false"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.pc.test.cqutil.pworkflows.ProductEmailWorkflowProcess">
+        <implementation class="com.pc.test.cqutil.pworkflows.ProductEmailWorkflowProcess"/>
+        <service servicefactory="false">
+            <provide interface="com.day.cq.workflow.exec.WorkflowProcess"/>
+        </service>
+        <property name="service.description" type="String" value="ProductEmailWorkflowProcess workflow process implementation." private="false"/>
+        <property name="service.vendor" type="String" value="PC" private="false"/>
+        <property name="process.label" type="String" value="ProductEmailWorkflowProcess Workflow Process" private="false"/>
+        <property name="service.pid" value="com.pc.test.cqutil.pworkflows.ProductEmailWorkflowProcess" private="false"/>
+        <reference name="messageGateway" interface="com.day.cq.mailer.MessageGateway" cardinality="1..1" policy="dynamic" bind="bindMessageGateway" unbind="unbindMessageGateway" checked="true" strategy="event"/>
+        <reference name="messageGatewayService" interface="com.day.cq.mailer.MessageGatewayService" cardinality="1..1" policy="static" bind="bindMessageGatewayService" unbind="unbindMessageGatewayService" checked="true" strategy="event"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.pc.test.cqutil.rest.DistanceImpl">
+        <implementation class="com.pc.test.cqutil.rest.DistanceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.pc.test.cqutil.rest.Distance"/>
+        </service>
+        <property name="service.pid" value="com.pc.test.cqutil.rest.DistanceImpl" private="false"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.pc.test.cqutil.user.SearchUsersImpl">
+        <implementation class="com.pc.test.cqutil.user.SearchUsersImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.pc.test.cqutil.user.SearchUsers"/>
+        </service>
+        <property name="service.pid" value="com.pc.test.cqutil.user.SearchUsersImpl" private="false"/>
+        <reference name="resolverFactory" interface="org.apache.sling.api.resource.ResourceResolverFactory" cardinality="1..1" policy="static" bind="bindResolverFactory" unbind="unbindResolverFactory" checked="true" strategy="event"/>
+    </scr:component>
+    <scr:component enabled="true" name="mypackage.SimpleDSComponent">
+        <implementation class="mypackage.SimpleDSComponent"/>
+        <service servicefactory="false">
+            <provide interface="java.lang.Runnable"/>
+        </service>
+        <property name="service.pid" value="mypackage.SimpleDSComponent" private="false"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.pc.test.cqutil.servlets.CustomerServlet">
+        <implementation class="com.pc.test.cqutil.servlets.CustomerServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.paths" value="/apps/services/customers.json" private="false"/>
+        <property name="service.pid" type="String" value="com.pc.test.cqutil.servlets.CustomerServlet" private="false"/>
+        <property name="service.description" type="String" value="ProductLoggingServlet" private="false"/>
+        <property name="service.vendor" type="String" value="pc" private="false"/>
+        <reference name="customerService" interface="com.pc.test.cqutil.chart.CustomerService" cardinality="1..1" policy="static" bind="bindCustomerService" unbind="unbindCustomerService" checked="true" strategy="event"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="com.pc.test.cqutil.servlets.SampleGetServlet">
+        <implementation class="com.pc.test.cqutil.servlets.SampleGetServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.resourceTypes" type="String" value="adaptto/sling/basics/sample/servlet" private="false"/>
+        <property name="sling.servlet.extensions" type="String" value="html" private="false"/>
+        <property name="sling.servlet.methods" type="String" value="GET" private="false"/>
+        <property name="service.pid" value="com.pc.test.cqutil.servlets.SampleGetServlet" private="false"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.pc.test.cqutil.servlets.SampleGetServletWithSelector">
+        <implementation class="com.pc.test.cqutil.servlets.SampleGetServletWithSelector"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.resourceTypes" value="adaptto/sling/basics/sample/servlet" private="false"/>
+        <property name="sling.servlet.selectors" value="selectme" private="false"/>
+        <property name="sling.servlet.extensions" value="html" private="false"/>
+        <property name="service.pid" value="com.pc.test.cqutil.servlets.SampleGetServletWithSelector" private="false"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.pc.test.cqutil.impl.MultipageFormSampleServlet">
+        <implementation class="com.pc.test.cqutil.impl.MultipageFormSampleServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Filter"/>
+            <provide interface="org.apache.sling.api.servlets.OptingServlet"/>
+            <provide interface="javax.servlet.Servlet"/>
+            <provide interface="javax.servlet.ServletConfig"/>
+            <provide interface="java.io.Serializable"/>
+        </service>
+        <property name="sling.servlet.resourceTypes" type="String" value="mywebsite/components/multipageform" private="false"/>
+        <property name="sling.servlet.methods" type="String" value="POST" private="false"/>
+        <property name="filter.scope" type="String" value="request" private="false"/>
+        <property name="filter.order" type="String" value="-600" private="false"/>
+        <property name="service.pid" value="com.pc.test.cqutil.impl.MultipageFormSampleServlet" private="false"/>
+    </scr:component>
+    <scr:component enabled="true" immediate="true" name="com.pc.test.cqutil.servlets.CustomImageSelector">
+        <implementation class="com.pc.test.cqutil.servlets.CustomImageSelector"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="service.description" type="String" value="Custom Image Selector" private="false"/>
+        <property name="service.vendor" type="String" value="pc" private="false"/>
+        <property name="sling.servlet.resourceTypes" type="String" private="false">
+            /content/dam/bandn/home/Koala
+            foundation/components/parbase
+            cq:Page
+            mywebsite/components/custom-rich-content
+        </property>
+        <property name="sling.servlet.selectors" type="String" private="false">
+            invokeSelector1
+            invokeSelector2
+        </property>
+        <property name="sling.servlet.extensions" type="String" private="false">
+            jpg
+            jpeg
+            png
+            gif
+            bmp
+        </property>
+        <property name="service.pid" value="com.pc.test.cqutil.servlets.CustomImageSelector" private="false"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.pc.test.cqutil.servlets.HandleClaim">
+        <implementation class="com.pc.test.cqutil.servlets.HandleClaim"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.paths" value="/bin/mySearchServlet" private="false"/>
+        <property name="sling.servlet.methods" value="POST" private="false"/>
+        <property name="service.pid" value="com.pc.test.cqutil.servlets.HandleClaim" private="false"/>
+        <reference name="source" interface="com.day.commons.datasource.poolservice.DataSourcePool" cardinality="1..1" policy="static" bind="bindSource" unbind="unbindSource" checked="true" strategy="event"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.pc.test.cqutil.servlets.ProductLoggingServlet">
+        <implementation class="com.pc.test.cqutil.servlets.ProductLoggingServlet"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.paths" value="/apps/services/myoptions.json" private="false"/>
+        <property name="service.pid" type="String" value="com.pc.test.cqutil.servlets.ProductLoggingServlet" private="false"/>
+        <property name="service.description" type="String" value="ProductLoggingServlet" private="false"/>
+        <property name="service.vendor" type="String" value="pc" private="false"/>
+    </scr:component>
+    <scr:component enabled="true" name="com.pc.test.cqutil.servlets.ProductServletPC">
+        <implementation class="com.pc.test.cqutil.servlets.ProductServletPC"/>
+        <service servicefactory="false">
+            <provide interface="javax.servlet.Servlet"/>
+        </service>
+        <property name="sling.servlet.paths" value="/apps/services/productPC.html" private="false"/>
+        <property name="service.pid" type="String" value="com.pearson.servlets.ProductServletPC" private="false"/>
+        <property name="service.description" type="String" value="ProductServletPC" private="false"/>
+        <property name="service.vendor" type="String" value="PC" private="false"/>
+    </scr:component>
+</components>

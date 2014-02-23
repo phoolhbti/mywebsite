@@ -1,0 +1,46 @@
+{
+    "users": [{
+        "user": {
+            "id": 0 ,
+            "name": "foo" ,
+            "age": 22 ,
+            "skills": [{
+                "type": "bowcrafting" ,
+                "skillLevel": 50 ,
+                "levels": [10, 25, 50, 75, 90, 95, 99, 100]
+            }]
+        }} , { 
+        "user": {
+            "id": 1 ,
+            "name": "bar" ,
+            "age": 71 ,
+            "skills": [{
+                "type": "fencing" ,
+                "skillLevel": 32 ,
+                "levels": [10, 25, 50, 90, 95, 99, 100]
+            } , {
+                "type": "swordsmanship" ,
+                "skillLevel": 73 ,
+                "levels": [10, 25, 50, 75, 80, 85, 90, 95, 99, 100]
+            }]
+        }} , {
+        "user": {
+            "id": 2 ,
+            "name": "foobar" ,
+            "age": 132 ,
+            "skills": [{
+                "type": "tactics" ,
+                "skillLevel": 90 ,
+                "levels": [10, 25, 50, 90, 95, 99, 100]
+            } , {
+                "type": "carpentery" ,
+                "skillLevel": 86 ,
+                "levels": [10, 25, 50, 75, 90, 95, 99, 100]
+            } , {
+                "type": "hiding" ,
+                "skillLevel": 100 ,
+                "levels": [10, 25, 50, 65, 75, 80, 85, 90, 95, 99, 100]
+            }]
+        }
+    }]
+}
