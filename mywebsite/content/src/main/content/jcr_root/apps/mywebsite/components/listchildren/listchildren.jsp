@@ -4,7 +4,7 @@
 
   This is My Listchildren Component
 
---%><%@include file="/libs/foundation/global.jsp"%><%
+--%><%@include file="/apps/mywebsite/global.jsp"%><%
 %><%@ page import="java.util.Iterator,
          com.day.cq.wcm.api.PageFilter"%><%
      /* Create a new Page object using the path of the current page */   

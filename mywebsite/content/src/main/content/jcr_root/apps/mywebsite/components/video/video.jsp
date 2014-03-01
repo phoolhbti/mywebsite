@@ -15,7 +15,7 @@
 
   ==============================================================================
 
---%><%@ include file="/libs/foundation/global.jsp" %><%
+--%><%@ include file="/apps/mywebsite/global.jsp" %><%
 %><%@ page import="com.day.cq.dam.api.Asset,
                    com.day.cq.wcm.api.WCMMode, 
                    com.day.cq.analytics.sitecatalyst.Framework,

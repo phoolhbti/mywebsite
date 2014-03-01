@@ -1,6 +1,6 @@
 <%@page import="com.pc.test.cqutil.multipageform.*"%>
 <%@page import="java.util.List"%>
-<%@include file="/libs/foundation/global.jsp" %>
+<%@include file="/apps/mywebsite/global.jsp" %>
 <%@taglib prefix="sling" uri="http://sling.apache.org/taglibs/sling/1.0"%>
 <sling:defineObjects/>
 <%@ page contentType="text/html;charset=UTF-8" %><%

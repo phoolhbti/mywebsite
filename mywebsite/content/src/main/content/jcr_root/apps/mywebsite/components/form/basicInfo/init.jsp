@@ -13,7 +13,7 @@
 
   Init of address component
 
---%><%@include file="/libs/foundation/global.jsp"%><%
+--%><%@include file="/apps/mywebsite/global.jsp"%><%
 %><%@ page import="com.day.cq.wcm.foundation.forms.FormsHelper,
                    com.day.cq.wcm.foundation.forms.FieldDescription,
                    com.day.cq.wcm.foundation.forms.FieldHelper" %><%

@@ -1,8 +1,0 @@
-Export-Package: com.pc.test.cqutil,com.pc.test.cqutil.jcrquery,com.pc.test.cqutil.product,com.pc.test.cqutil.pworkflows,com.pc.test.cqutil.servlets,com.pc.test.cqutil.multipageform,com.pc.test.cqutil.pearson,com.pc.test.cqutil.test
-Private-Package: com.pc.test.cqutil.impl
-Bundle-Name: Sample project cqutil
-Bundle-Description: Contains the cqutil sample bundle
-Bundle-SymbolicName: com.pc.test.cqutil
-Bundle-Version: 1.0-SNAPSHOT
-Bundle-Activator: com.pc.test.cqutil.impl.Activator
-Sling-Test-Regexp:.*Test

@@ -17,7 +17,7 @@
 
 --%><%@ page import="com.day.cq.collab.blog.Blog,
                      com.day.cq.collab.blog.BlogManager" %><%
-%><%@include file="/libs/foundation/global.jsp" %><%
+%><%@include file="/apps/mywebsite/global.jsp" %><%
 
     BlogManager blogMgr = resource.getResourceResolver().adaptTo(BlogManager.class);
     Blog blog = blogMgr.getBlog(slingRequest);

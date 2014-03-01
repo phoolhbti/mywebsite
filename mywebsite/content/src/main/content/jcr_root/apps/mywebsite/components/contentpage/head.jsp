@@ -22,7 +22,7 @@
 
   ==============================================================================
 
---%><%@include file="/libs/foundation/global.jsp" %><%
+--%><%@include file="/apps/mywebsite/global.jsp" %><%
 %><%@ page import="com.day.cq.commons.Doctype,
                    org.apache.commons.lang3.StringEscapeUtils" %><%
     String xs = Doctype.isXHTML(request) ? "/" : "";

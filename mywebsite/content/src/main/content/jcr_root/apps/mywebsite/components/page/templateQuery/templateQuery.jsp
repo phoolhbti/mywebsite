@@ -1,4 +1,4 @@
-<%@include file="/libs/foundation/global.jsp"%>
+<%@include file="/apps/mywebsite/global.jsp"%>
 <cq:include script="/libs/wcm/core/components/init/init.jsp"/>
 <cq:includeClientLib categories="jcrtemplate" />
 <html>

@@ -15,7 +15,7 @@
 
   Draws an element of a form
 
---%><%@include file="/libs/foundation/global.jsp"%><%
+--%><%@include file="/apps/mywebsite/global.jsp"%><%
 %><%@ page import="com.day.cq.wcm.foundation.forms.FormsHelper,
         com.day.cq.wcm.foundation.forms.LayoutHelper,
         org.apache.commons.lang3.StringEscapeUtils,

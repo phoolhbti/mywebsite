@@ -1,6 +1,6 @@
 <%@page import="java.util.List" %><%
 %><%@page import="com.pc.test.cqutil.multipageform.*" %><%
-%><%@include file="/libs/foundation/global.jsp"%>
+%><%@include file="/apps/mywebsite/global.jsp"%>
 <%
     //init; set first page
     if (request.getAttribute("mywebsite/components/multipageform/form/displayPage") == null) {

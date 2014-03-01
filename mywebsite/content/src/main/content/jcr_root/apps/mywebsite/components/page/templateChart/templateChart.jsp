@@ -1,4 +1,4 @@
-<%@include file="/libs/foundation/global.jsp"%>
+<%@include file="/apps/mywebsite/global.jsp"%>
 
 <cq:includeClientLib categories="chartjquery" />
 <html>

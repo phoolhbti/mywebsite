@@ -1,5 +1,0 @@
-jquery.js
-jquery.flot.js
-jquery.flot.categories.js
-
-

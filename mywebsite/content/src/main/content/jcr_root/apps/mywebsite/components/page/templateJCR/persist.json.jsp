@@ -1,4 +1,4 @@
-<%@include file="/libs/foundation/global.jsp"%>
+<%@include file="/apps/mywebsite/global.jsp"%>
 <%@ page import="org.apache.sling.commons.json.io.*,com.adobe.cq.*" %><%
 String first = request.getParameter("first");
 String last = request.getParameter("last");

@@ -16,5 +16,5 @@
 
   ==============================================================================
 
---%><%@ include file="/libs/foundation/global.jsp" %><%
+--%><%@ include file="/apps/mywebsite/global.jsp" %><%
 %><%= currentStyle.get("fallbackMessage", "No video available.") %>

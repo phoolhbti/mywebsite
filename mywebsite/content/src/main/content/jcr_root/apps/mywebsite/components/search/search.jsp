@@ -6,7 +6,7 @@
 
 --%>
 <%@ page import="com.day.cq.wcm.foundation.Search,com.day.cq.tagging.TagManager" %>
-<%@include file="/libs/foundation/global.jsp" %><%
+<%@include file="/apps/mywebsite/global.jsp" %><%
 %><cq:setContentBundle/><%
     Search search = new Search(slingRequest);
   

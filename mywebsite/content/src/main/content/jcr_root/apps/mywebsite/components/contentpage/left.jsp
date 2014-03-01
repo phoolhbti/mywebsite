@@ -1,4 +1,4 @@
-<%@include file="/libs/foundation/global.jsp"%><%
+<%@include file="/apps/mywebsite/global.jsp"%><%
 %><%@ page import="com.day.text.Text"%><%
 %><% String docroot = currentDesign.getPath(); 
 String home = Text.getAbsoluteParent(currentPage.getPath(), 2);%>

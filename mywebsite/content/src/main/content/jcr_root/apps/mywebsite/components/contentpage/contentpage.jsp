@@ -1,4 +1,4 @@
-<%@include file="/libs/foundation/global.jsp"%><%
+<%@include file="/apps/mywebsite/global.jsp"%><%
 %><%@page session="false" contentType="text/html; charset=utf-8" %><%
 %><!DOCTYPE HTML>
 <html>

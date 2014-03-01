@@ -1,4 +1,4 @@
-<%@include file="/libs/foundation/global.jsp"%>
+<%@include file="/apps/mywebsite/global.jsp"%>
 <%@ page import="org.apache.sling.commons.json.io.*,org.w3c.dom.*" %>
 
 <script>alert("in json");</script>

@@ -1,4 +1,4 @@
-<%@include file="/libs/foundation/global.jsp"%><%
+<%@include file="/apps/mywebsite/global.jsp"%><%
  
     Node node = resource.adaptTo(Node.class);
     // load properties

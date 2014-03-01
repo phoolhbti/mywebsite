@@ -1,4 +1,4 @@
-<%@include file="/libs/foundation/global.jsp"%><%
+<%@include file="/apps/mywebsite/global.jsp"%><%
 %><div class="center">
 <div><cq:include path="trail" resourceType="foundation/components/breadcrumb" /></div>
 <div><cq:include path="title" resourceType="foundation/components/title" /></div>

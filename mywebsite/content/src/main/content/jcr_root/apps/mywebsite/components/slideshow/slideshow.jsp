@@ -15,7 +15,7 @@
 
 --%><%@ page import="com.day.cq.commons.jcr.JcrUtil,
                      com.day.cq.wcm.api.components.DropTarget" %><%
-%><%@include file="/libs/foundation/global.jsp"%><%
+%><%@include file="/apps/mywebsite/global.jsp"%><%
 
     //drop target css class = dd prefix + name of the drop target in the edit config
     String ddClassName = DropTarget.CSS_CLASS_PREFIX + "slideshow";

@@ -1,4 +1,4 @@
-<%@include file="/libs/foundation/global.jsp" %>
+<%@include file="/apps/mywebsite/global.jsp" %>
 <div class="content">
  
 <div class="content_upper">

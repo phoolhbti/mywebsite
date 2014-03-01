@@ -4,7 +4,7 @@
 
    This is My Logo Component
 
---%><%@include file="/libs/foundation/global.jsp"%><%
+--%><%@include file="/apps/mywebsite/global.jsp"%><%
 %><%@ page import="com.day.text.Text,
                    com.day.cq.wcm.foundation.Image,
                    com.day.cq.commons.Doctype" %><%

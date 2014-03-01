@@ -19,7 +19,7 @@
     com.day.cq.wcm.api.WCMMode,
     com.day.cq.wcm.api.components.DropTarget,
     com.day.cq.wcm.foundation.Image" %><%
-%><%@include file="/libs/foundation/global.jsp"%><%
+%><%@include file="/apps/mywebsite/global.jsp"%><%
     Image image = new Image(resource, "image");
 
     if (image.hasContent() || WCMMode.fromRequest(request) == WCMMode.EDIT) {
