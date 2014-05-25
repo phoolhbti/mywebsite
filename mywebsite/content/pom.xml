@@ -114,6 +114,70 @@
           </lifecycleMappingMetadata>
         </configuration>
       </plugin>
+		<!-- 
+    <plugin>
+      <artifactId>maven-resources-plugin</artifactId>
+      <executions>
+        <execution>
+          <id>copy-resources</id>
+          <phase>generate-sources</phase>
+          <goals>
+            <goal>copy-resources</goal>
+          </goals>
+          <configuration>
+            <outputDirectory>${project.build.directory}/jsps-to-compile</outputDirectory>
+            <resources>
+              <resource>  
+      <directory>src/main/content/jcr_root</directory>  
+      <includes>  
+          <include>apps/**</include>  
+          <include>libs/foundation/global.jsp</include>
+    </includes>  
+  </resource>  
+            </resources>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
+    <plugin>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>maven-jspc-plugin</artifactId>
+      <version>2.0.6</version>
+      <executions>
+        <execution>
+          <id>compile-jsp</id>
+          <goals>
+            <goal>jspc</goal>
+          </goals>
+          <configuration>
+            <jasperClassDebugInfo>false</jasperClassDebugInfo>
+            <sourceDirectory>${project.build.directory}/jsps-to-compile</sourceDirectory>
+            <outputDirectory>${project.build.directory}/ignoredjspc</outputDirectory>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
+    <plugin>
+      <artifactId>maven-clean-plugin</artifactId>
+      <executions>
+        <execution>
+          <id>remove-compiled-jsps</id>
+          <goals>
+            <goal>clean</goal>
+          </goals>
+          <phase>process-classes</phase>
+          <configuration>
+            <excludeDefaultDirectories>true</excludeDefaultDirectories>
+            <filesets>
+              <fileset>
+                <directory>${project.build.directory}/jsps-to-compile</directory>
+                <directory>${project.build.directory}/ignoredjspc</directory>
+              </fileset>
+            </filesets>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>  ... -->
         </plugins>
     </build>
     <dependencies>
@@ -122,6 +186,12 @@
             <artifactId>mywebsite-bundle</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+	<groupId>org.apache.sling</groupId>
+	<artifactId>org.apache.sling.scripting.jsp.taglib</artifactId>
+	
+</dependency>
+            
     </dependencies>
     <profiles>
         <profile>
@@ -135,9 +205,9 @@
                             <execution>
                                 <id>install-content-package</id>
                                 <phase>install</phase>
-                                <goals>
-                                    <goal>install</goal>
+                                <goals>                                    
 									<goal>package</goal>
+									<goal>install</goal>
                                 </goals>
                             </execution>
                         </executions>
