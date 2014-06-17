@@ -1,5 +1,5 @@
 <%@page import="java.util.List" %><%
-%><%@page import="com.pc.test.cqutil.multipageform.*" %><%
+%><%@page import="com.pc.multipageform.*" %><%
 %><%@include file="/apps/mywebsite/global.jsp"%>
 <%
     //init; set first page
@@ -8,7 +8,7 @@
     }
 
     //init; set field defaults
-    List<FormField> fields = com.pc.test.cqutil.multipageform.SampleUtil.getFieldNames();
+    List<FormField> fields = com.pc.multipageform.SampleUtil.getFieldNames();
     for (FormField field: fields) {
         if (request.getAttribute("mywebsite/components/multipageform/form/" + field.getName()) == null) {
             request.setAttribute("mywebsite/components/multipageform/form/" + field.getName(), "");

@@ -18,8 +18,8 @@
 	</filter>  
 -->	
 <filter root="/etc/designs/mywebsite" />
-<filter root="/apps/mywebsite">
-</filter>
+<filter root="/apps/mywebsite"/>
+<filter root="/etc/clientlibs/mywebsite" />
 <filter root="/content/mywebsite"/>
 <filter root="/apps/mywebsite/install" />
 <filter root="/apps/system/config" />

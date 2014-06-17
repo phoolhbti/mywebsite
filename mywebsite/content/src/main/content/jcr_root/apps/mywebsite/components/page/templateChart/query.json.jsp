@@ -1,8 +1,9 @@
 <%@include file="/apps/mywebsite/global.jsp"%>
-<%@ page import="org.apache.sling.commons.json.io.*,org.w3c.dom.*" %><%
+<%@ page import="org.apache.sling.commons.json.io.JSONWriter,
+				org.w3c.dom.*" %><%
 String filter = request.getParameter("filter");
    
-com.pc.test.cqutil.chart.CustomerService cs = sling.getService(com.pc.test.cqutil.chart.CustomerService.class);
+com.pc.chart.CustomerService cs = sling.getService(com.pc.chart.CustomerService.class);
    
 String XML = cs.getCustRevenue() ; 
     

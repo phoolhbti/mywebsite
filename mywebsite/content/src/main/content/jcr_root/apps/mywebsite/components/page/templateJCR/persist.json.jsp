@@ -1,11 +1,12 @@
 <%@include file="/apps/mywebsite/global.jsp"%>
-<%@ page import="org.apache.sling.commons.json.io.*,com.adobe.cq.*" %><%
+<%@ page import="org.apache.sling.commons.json.io.JSONWriter
+				" %><%
 String first = request.getParameter("first");
 String last = request.getParameter("last");
 String phone = request.getParameter("phone");
 String desc = request.getParameter("desc");
  
-com.pc.test.cqutil.jcrquery.CustomerService cs = sling.getService(com.pc.test.cqutil.jcrquery.CustomerService.class);
+com.pc.jcrquery.CustomerService cs = sling.getService(com.pc.jcrquery.CustomerService.class);
  
 int myPK = cs.injestCustData(first, last, phone, desc) ; 
   

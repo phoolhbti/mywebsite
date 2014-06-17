@@ -1,4 +1,4 @@
-<%@page import="com.pc.test.cqutil.multipageform.*"%>
+<%@page import="com.pc.multipageform.*"%>
 <%@page import="java.util.List"%>
 <%@include file="/apps/mywebsite/global.jsp"%>
 <%@taglib prefix="sling" uri="http://sling.apache.org/taglibs/sling/1.0"%>
@@ -8,8 +8,8 @@
     String displayPage = (String) request.getAttribute("mywebsite/components/multipageform/form/displayPage");
 
     //get form defintions
-    List<FormField> allfields = com.pc.test.cqutil.multipageform.SampleUtil.getFieldNames();
-    List<FormPage> formPages = com.pc.test.cqutil.multipageform.SampleUtil.getFormPages();
+    List<FormField> allfields = com.pc.multipageform.SampleUtil.getFieldNames();
+    List<FormPage> formPages = com.pc.multipageform.SampleUtil.getFormPages();
     
     //get the form object for the current form page
     FormPage formPage = formPages.iterator().next();
@@ -21,7 +21,7 @@
     }
  %>
 
-<div><%=com.pc.test.cqutil.multipageform.SampleUtil.getText()%>  <%=displayPage%>
+<div><%=com.pc.multipageform.SampleUtil.getText()%>  <%=displayPage%>
 <form name="sampleform" id="sampleform" action="<%=resourceResolver.map(currentPage.getPath())%>.html" method="POST" enctype="multipart/form-data">
     
     <input type="hidden" name=":formpath" value="<%=currentNode.getPath()%>" /> 

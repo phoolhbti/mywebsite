@@ -1,4 +1,5 @@
-<%@ page import="org.apache.sling.commons.json.io.*,com.pc.test.cqutil.jcrquery.*" %><%
+<%@ page import="org.apache.sling.commons.json.io.JSONWriter,
+				 com.pc.jcrquery.CustomerServiceSQLImpl" %><%
 String first = request.getParameter("first");
 String last = request.getParameter("last");
 String phone = request.getParameter("phone");
@@ -6,7 +7,7 @@ String desc = request.getParameter("desc");
  
 //invoke the CustomerServer object's injestCustData method
 out.println("persistes json jsp");
-com.pc.test.cqutil.jcrquery.CustomerServiceSQLImpl custService = new com.pc.test.cqutil.jcrquery.CustomerServiceSQLImpl();
+CustomerServiceSQLImpl custService = new CustomerServiceSQLImpl();
 out.println("object is"+custService);
 int myPK = custService.injestCustData(first, last, phone, desc) ; 
   

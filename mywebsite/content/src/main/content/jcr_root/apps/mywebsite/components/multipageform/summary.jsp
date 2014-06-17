@@ -4,10 +4,10 @@
 <%@taglib prefix="sling" uri="http://sling.apache.org/taglibs/sling/1.0"%>
 <sling:defineObjects/>
 <%@ page contentType="text/html;charset=UTF-8" %><%
-  List<FormField> fields = com.pc.test.cqutil.multipageform.SampleUtil.getFieldNames();
+  List<FormField> fields =com.pc.multipageform.SampleUtil.getFieldNames();
   %>
 <div>
-  <%= com.pc.test.cqutil.multipageform.SampleUtil.getText() %> SUMMARY
+  <%= com.pc.multipageform.SampleUtil.getText() %> SUMMARY
 
 <form name="sampleform" id="sampleform" action="<%=resourceResolver.map(currentPage.getPath())%>.html" method="POST" enctype="multipart/form-data">
     <input type="hidden" name=":formpath" value="<%= currentNode.getPath() %>" />
