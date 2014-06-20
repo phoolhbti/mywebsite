@@ -1,6 +1,6 @@
 <%@include file="/apps/mywebsite/global.jsp"%><%
  
-    Node node = resource.adaptTo(Node.class);
+  //  Node node = resource.adaptTo(Node.class);
     // load properties
     int width = properties.get("width", 600);
     int height = properties.get("height", 300);
@@ -40,13 +40,13 @@ var store = new CQ.Ext.data.JsonStore({
  <script type="text/javascript" src="/apps/mywebsite/components/aemgrid/defaultgrid.js"></script> 
  <script type="text/javascript"> 
  
-    var grid = CQ.Ext.getCmp("<%= node.getName() %>-grid");
+    var grid = CQ.Ext.getCmp("<%= resource.getName() %>-grid");
     if (!grid) {
  
         var gridPanel = getGridPanel();
  
         grid = new CQ.Ext.Window({
-            id:"<%= node.getName() %>-grid",
+            id:"<%= resource.getName() %>-grid",
             title:"Grid Example 24",
             layout:"fit",
             hidden:true,

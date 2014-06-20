@@ -1,4 +1,4 @@
-<%@page import="com.pc.test.cqutil.multipageform.*"%>
+<%@page import="com.pc.multipageform.*"%>
 <%@page import="java.util.List"%>
 <%@include file="/apps/mywebsite/global.jsp" %>
 <%@taglib prefix="sling" uri="http://sling.apache.org/taglibs/sling/1.0"%>
@@ -10,7 +10,7 @@
   <%= com.pc.multipageform.SampleUtil.getText() %> SUMMARY
 
 <form name="sampleform" id="sampleform" action="<%=resourceResolver.map(currentPage.getPath())%>.html" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name=":formpath" value="<%= currentNode.getPath() %>" />
+    <input type="hidden" name=":formpath" value="<%= currentPage.getPath() %>" />
     <input type="hidden" name=":formtype" value="<%= component.getResourceType() %>" />
     <input type="hidden" name=":redirect" value="<%= resourceResolver.map(currentPage.getPath())%>.thankyou.html" />
     <input type="hidden" name="_charset_" value="utf-8" />

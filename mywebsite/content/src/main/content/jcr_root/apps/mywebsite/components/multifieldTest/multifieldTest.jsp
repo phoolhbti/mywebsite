@@ -41,7 +41,7 @@
     
         %><cq:text property="image/jcr:description" placeholder="" tagName="small"/><%
         %></div>
-        <%@include file="/libs/foundation/components/image/tracking-js.jsp"%>
+        
         <%
     }
     %><cq:text property="text" tagClass="text"/><div class="clear"></div>

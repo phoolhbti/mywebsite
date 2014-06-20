@@ -2,11 +2,12 @@
 <cq:includeClientLib categories="mywebsite.components.hero" />
  
 <%@ page import="com.day.cq.commons.Doctype,
+					
                     com.day.cq.wcm.foundation.Image,
                     com.day.cq.wcm.api.components.DropTarget,
                     com.day.cq.wcm.api.components.EditConfig,
-                    com.day.cq.wcm.commons.WCMUtils,
-                    org.apache.jackrabbit.commons.JcrUtils"
+                    com.day.cq.wcm.commons.WCMUtils
+                   "
                         %>
  
 ----------------------------------
@@ -16,14 +17,14 @@
 ----------------------------------
  
  
-<%String displayType = properties.get("displayType", String.class);%>
-<b>&nbsp;Display Type:&nbsp;&nbsp;</b><cq:text property="jcr:text" value="<%= displayType %>" />
+
+<b>&nbsp;Display Type:&nbsp;&nbsp;</b><cq:text property="jcr:text" value="${properties.displayType}" />
  
-<%String imageurl = properties.get("imageurl", String.class);%>
-<b>&nbsp;URL:&nbsp;&nbsp;</b><cq:text property="jcr:text" value="<%= imageurl %>" />
+
+<b>&nbsp;URL:&nbsp;&nbsp;</b><cq:text property="jcr:text" value="${properties.imageurl}" />
  
-<%String imagealttext = properties.get("imagealttext", String.class);%>
-<b>&nbsp;Alt Text:&nbsp;&nbsp;</b><cq:text property="jcr:text" value="<%= imagealttext %>" />
+
+<b>&nbsp;Alt Text:&nbsp;&nbsp;</b><cq:text property="jcr:text" value="${properties.imagealttext}" />
  
  
  
@@ -74,30 +75,32 @@ ${footnote}
  
 <b>&nbsp;LINKS TAB:</b>
  
-<% Node node = null;
-    if(resource.adaptTo(Node.class)!=null)
+<% //Node node = null;
+    if(resource!=null)
     {
  
-    node=resource.adaptTo(Node.class);
+   // node=resource.adaptTo(Node.class);
  
-    PropertyIterator props=null;
-    if (node.getProperties()!=null)
-        props = node.getProperties();
- 
-        while (props.hasNext()) {
-            Property prop = props.nextProperty();
-            String name = prop.getName();
+    //PropertyIterator props=null;
+    //if (node.getProperties()!=null)
+       // props = node.getProperties();
+        ValueMap props = resource.adaptTo(ValueMap.class);
+
+       // while (props.hasNext()) {
+            //Property prop = props.nextProperty();
+           // String name = prop.getName();
             //System.out.println("property -- "+name);
+            String[] values = (String[]) props.get("links", String[].class);
             String value=null;
-            String[] linkFields =null;
+           String[] linkFields =null;
  
-                if (prop.getDefinition().isMultiple() && (name.equalsIgnoreCase("links"))) {
+            //    if (prop.getDefinition().isMultiple() && (name.equalsIgnoreCase("links"))) {
                     StringBuffer buf = new StringBuffer();
                     //buf.append("Link Type : ");
-                    Value[] values = prop.getValues();
+                    //Value[] values = prop.getValues();
                     for (int i = 0; i < values.length; i++) {
                         buf.append(i > 0 ? "," : "");
-                        buf.append(values[i].getString());
+                        buf.append(values[i]);
                     }
  
                     value = buf.toString();
@@ -119,7 +122,7 @@ ${footnote}
                                 }
                         }
      
-                }
+             //   }
                 else {
                     if (name.equalsIgnoreCase("links")){
                 value = prop.getString();
@@ -137,7 +140,7 @@ ${footnote}
  
                     }
                 }
-        }
+      //  }
         %>
  
 -------------------------------
@@ -146,10 +149,10 @@ ${footnote}
 <b>OTHER IMAGES:</b>
  
 <% 
-       for (Node n1 : JcrUtils.getChildNodes(node)){
+       for (Resource n1 : resource.getChildren()){
             String imagePath = n1.getPath().toString();
             Resource imageResource = resourceResolver.getResource(imagePath);
-            Node imageNode = imageResource.adaptTo(Node.class);
+           // Node imageNode = imageResource.adaptTo(Node.class);
             ValueMap imageNodeProps = imageResource.adaptTo(ValueMap.class);
             String imageName = null;
             imageName= imageNodeProps.get("fileReference", "None");

@@ -24,7 +24,7 @@
 <div><%=com.pc.multipageform.SampleUtil.getText()%>  <%=displayPage%>
 <form name="sampleform" id="sampleform" action="<%=resourceResolver.map(currentPage.getPath())%>.html" method="POST" enctype="multipart/form-data">
     
-    <input type="hidden" name=":formpath" value="<%=currentNode.getPath()%>" /> 
+    <input type="hidden" name=":formpath" value="<%=currentPage.getPath()%>" /> 
     <input type="hidden" name=":formtype" value="<%=component.getResourceType()%>" /> 
     <input type="hidden" name=":redirect" value="<%=resourceResolver.map(currentPage.getPath())%>.html" /> 
     <input type="hidden" name="_charset_" value="utf-8" /> 
