@@ -24,6 +24,7 @@ import javax.xml.transform.stream.StreamResult;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Service;
 import org.apache.felix.scr.annotations.Properties;
+import org.apache.felix.scr.annotations.Property;
 
 import javax.jcr.RepositoryException;
 
@@ -38,8 +39,9 @@ import com.pc.beans.Customer;
 @Component(metatype = true)
 @Service
 @Properties({
-		@org.apache.felix.scr.annotations.Property(name = Constants.SERVICE_DESCRIPTION, value = "Customer Services"),
-		@org.apache.felix.scr.annotations.Property(name = Constants.SERVICE_VENDOR, value = "PC") })
+		@Property(name = Constants.SERVICE_DESCRIPTION, value = "Customer Services"),
+		@Property(name = Constants.SERVICE_VENDOR, value = "PC")
+		})
 public class CustomerServiceImp implements CustomerService {
 
 	/** Default log. */
